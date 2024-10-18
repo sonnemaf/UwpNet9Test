@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "App105": {
+      "commandName": "MsixPackage"
+    }
+  }
+}
