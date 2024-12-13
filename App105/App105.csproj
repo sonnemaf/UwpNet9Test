@@ -1,18 +1,30 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
         <TargetFramework>net9.0-windows10.0.26100.0</TargetFramework>
-        <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+        <TargetPlatformMinVersion>10.0.18362.0</TargetPlatformMinVersion>
+        <LangVersion>preview</LangVersion>
         <UseUwp>true</UseUwp>
-        <UseUwpTools>true</UseUwpTools>
+        <Nullable>enable</Nullable>
+        <!--<UseUwpTools>true</UseUwpTools>-->
         <Platforms>x86;x64;arm64</Platforms>
         <RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
         <DefaultLanguage>en-US</DefaultLanguage>
         <PublishAot>true</PublishAot>
+        <!--<PublishAot>false</PublishAot>-->
         <PublishProfile>win-$(Platform).pubxml</PublishProfile>
         <DisableRuntimeMarshalling>true</DisableRuntimeMarshalling>
         <EnableMsixTooling>true</EnableMsixTooling>
         <WindowsSdkPackageVersion>10.0.26100.54</WindowsSdkPackageVersion>
         <ImplicitUsings>enabled</ImplicitUsings>
+
+        <CsWinRTAotWarningLevel>2</CsWinRTAotWarningLevel>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
+    <ItemGroup>
+      <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj" />
+    </ItemGroup>
 </Project>
